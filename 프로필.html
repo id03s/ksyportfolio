@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>곽수연의 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+
+/* 명함 전화번호 있는 파트 */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 200px; 
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* 원 모양으로 보이도록 원형으로 잘라냄 */
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+}
+
+ /*연락처폼css*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 150px; /* 메시지창의 높이를 균일하게 설정 */
+    resize: none; /* 사용자가 크기를 조절하지 못하도록 설정 */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+    
+/*헤더*/
+    .custom-color {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:visited {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:hover {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:active {
+    color: white;
+     text-decoration: none;
+}
+</style>
+
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" class="title-link custom-color">곽수연의 포트폴리오</a></h1><br><hr>
+            <nav>
+                <ul>
+                    <li><a href="프로필.html">프로필</a></li>
+                    <li><a href="이력.html">이력</a></li>
+                    <li><a href="프로젝트.html">프로젝트</a></li>
+                    <li><a href="대내외활동.html">대내외활동</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="about">
+         <div class="container">
+        <div class="profile">
+            <div class="profile-picture">
+                <img src="곽수연증명사진.jpg" alt="곽수연증명사진" width="200" height="250">
+            </div>
+            <div class="profile-info">
+                <h2>안녕하세요, 클릭해주셔서 감사합니다.</h2>
+                <p>군산대학교 컴퓨터정보공학과에 재학중인 곽수연입니다. 빠른 문의는 연락처를 남겨두었으니 연락해주세요.<br>
+                밑에 연락처를 남겨주셔도 좋습니다.</p>
+                <p>Tel. 010.5056.5349</p>
+                <p>Kakaotalk. ksy030530
+                <p>E-mail. syk030530@naver.com</p>
+                <p>Link. <a href="https://www.instagram.com/id03s">
+                   <img src="instagram.png" alt="인스타그램" width="20" height="20">
+                   <a href="https://blog.naver.com/syk030530">
+                   <img src="blog.png" alt="네이버블로그" width="20" height="20"></a></p>
+            </div>
+        </div>
+    </div>
+        <section id="contact">
+    <div class="container">
+        <h2>연락처</h2>
+        <hr>
+        <form id="contactForm">
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">메시지:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">보내기</button>
+        </form>
+    </div>
+</section>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2200898 곽수연</p>
+        </div>
+    </footer>
+
+<script> /*메시지보내는 스크립트*/
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('메시지가 성공적으로 전송되었습니다.');
+});
+</script>
+</body>
+</html>

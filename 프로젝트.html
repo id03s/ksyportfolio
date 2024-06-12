@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>곽수연의 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+/*헤더 이게왜 그러는거지?\*/
+    .custom-color {
+    color: white;
+     text-decoration: none;
+}
+
+/*버튼*/
+.details {
+    display: none;
+    margin-top: 10px;
+}
+.toggle-button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #808080;
+}
+
+/*헤더*/
+.custom-color:visited {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:hover {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:active {
+    color: white;
+     text-decoration: none;
+}
+</style>
+<body>
+ <header>
+        <div class="container">
+            <h1><a href="index.html" class="title-link custom-color">곽수연의 포트폴리오</a></h1><br><hr>
+            <nav>
+                <ul>
+                    <li><a href="프로필.html">프로필</a></li>
+                    <li><a href="이력.html">이력</a></li>
+                    <li><a href="프로젝트.html">프로젝트</a></li>
+                    <li><a href="대내외활동.html">대내외활동</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <section id="projects">
+    <div class="container">
+        <h2>프로젝트</h2>
+        <hr>
+        <div class="project">
+            <h3>개인 홈페이지 만들기-프레임 만들기</h3>
+            <p><strong>기간</strong>: 2024-04-01 ~ 2024-04-11</p>
+            <p><strong>설명</strong>: 중간고사 전 까지 배운내용을 활용하여 개인 미니홈피를 만들어보는 활동</p>
+            <button class="toggle-button" onclick="toggleProjectDetails('project1-details')">더 보기</button>
+            <div id="project1-details" class="details">
+                <p><strong>사용 기술</strong>: HTML, CSS </p>
+                <strong>관련 자료</strong>: <a href="https://github.com/id03s/K.S.Y-studyroom" target="_blank">GitHub 링크</a>
+                <a href="https://id03s.github.io/K.S.Y-studyroom/" target="_blank">프로젝트 링크</a>
+            </div>
+        <br>
+        </div>
+        <div class="project">
+            <h3>다양한 머신러닝,딥러닝 모델을 사용하여 나의 건강상태 확인하기</h3>
+            <p><strong>기간</strong>: 2024-05-01 - 2024-06-11</p>
+            <p><strong>설명</strong>: 팀원들과 함께 선형회귀, KNN(K-최근접 이웃 알고리즘), MLP(다층 퍼셉트론), DNN(심층신경망)을 사용하여 정확도를 확인함과 동시에 나의 건강상태가 어떤지 확인하는 프로그램. 저는 DNN을 맡아 발표했습니다. </p>
+            <button class="toggle-button" onclick="toggleProjectDetails('project2-details')">더 보기</button>
+            <div id="project2-details" class="details">
+                <p><strong>사용 기술</strong>: python </p>
+                <strong>관련 자료</strong>: <a href="머신러닝-심층신경망.pptx" target="_blank">ppt파일</a>
+            </div>
+        </div>
+        <!-- 필요한 만큼 프로젝트를 추가합니다. -->
+    </div>
+</section>
+<footer>
+        <div class="container">
+            <p>&copy; 2200898 곽수연</p>
+        </div>
+    </footer>
+<script>
+function toggleProjectDetails(id) {
+    const details = document.getElementById(id);
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
+    } else {
+        details.style.display = "none";
+    }
+}
+</script>
+</body>
+<html>

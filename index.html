@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곽수연의 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+/*welcome*/
+    .hero {
+        color: black;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+        margin: 0;
+    }
+
+    .hero p {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+/*나의 취미소개*/
+    .hobbies, .blog, .gallery, .activities {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .hobbies h3, .blog h3, .gallery h3, .activities h3 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .hobby-item, .blog-item, .gallery-item, .activity-item {
+        margin: 20px 0;
+    }
+
+    .hobby-item img, .gallery-item img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .hobby-item img:hover, .gallery-item img:hover {
+        transform: scale(1.1);
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+        margin: 15% auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;}
+
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
+
+    .slides {
+        display: none;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+ /*나의목표*/
+    .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .dots {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/*헤더*/
+    .custom-color {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:visited {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:hover {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:active {
+    color: white;
+     text-decoration: none;
+}
+
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" class="title-link custom-color">곽수연의 포트폴리오</a></h1><br><hr>
+            <nav>
+                <ul>
+                    <li><a href="프로필.html">프로필</a></li>
+                    <li><a href="이력.html">이력</a></li>
+                    <li><a href="프로젝트.html">프로젝트</a></li>
+                    <li><a href="대내외활동.html">대내외활동</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <br><br><br><h2>HELLO !</h2>
+        <img src="welcome.jpg" alt="welcome" width="600" height="800">
+        <p>저의 포트폴리오에 오신 것을 환영합니다. 저에 대해 소개하겠습니다. 저를 알고싶다면 아래로 스크롤 해주세요</p>
+        <p>이 미니홈피는 저의 프로필과 꿈을 향한 활동을 담았습니다. 앞으로 더 많은 활동을 하겠습니다.</p>
+    </section>
+    <section class="hobbies">
+        <h3>취미와 관심사</h3>
+        <small>아이콘을 누르면 사진을 확대할 수 있습니다.</small>
+        <div class="hobby-item">
+            <img src="강아지.jpg" alt="강아지" class="clickable">
+            <p>저는 강아지를 좋아합니다. 최근 새끼강아지가 생겨서 기분이 매우 좋습니다</p>
+        </div>
+        <div class="hobby-item">
+            <img src="운동.jpg" alt="운동" class="clickable">
+            <p>어느덧 벌써 운동을 시작한지 6개월이 넘었습니다.</p>
+        </div>
+    </section>
+    <section class="blog">
+        <h3>나의 목표</h3>
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <div class="numbertext">1 / 4</div>
+                <h4>높은 성적 받기</h4>
+            </div>
+            <div class="slides fade">
+                <div class="numbertext">2 / 4</div>
+                <h4>임용고시 보기</h4>
+            </div>
+            <div class="slides fade">
+                <div class="numbertext">3 / 4</div>
+                <h4>국가자격증 따기</h4>
+            </div>
+            <div class="slides fade">
+                <div class="numbertext">4 / 4</div>
+                <h4>건강! 열정!</h4>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="container">
+            <p>&copy; 2200898 곽수연</p>
+        </div>
+    </footer>
+
+    <!-- Modal for image preview -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Modal image script (갤러리 관련스크립)
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var images = document.getElementsByClassName("clickable");
+
+        for (let img of images) {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Slideshow script (갤러리 전시식)
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>

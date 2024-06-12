@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>대내외 활동</title>
+     <link rel="stylesheet" href="style.css">
+    <style>
+          
+/* styles2.css */
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 200px; /* 원하는 크기로 조절 */
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%; /* 원 모양으로 보이도록 원형으로 잘라냄 */
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+}
+form { /*연락처폼css*/
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 150px; /* 메시지창의 높이를 균일하게 설정 */
+    resize: none; /* 사용자가 크기를 조절하지 못하도록 설정 */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+/*헤더*/
+    .custom-color {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:visited {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:hover {
+    color: white;
+     text-decoration: none;
+}
+
+.custom-color:active {
+    color: white;
+     text-decoration: none;
+}
+        /* CSS styles here */
+        /* Your existing CSS styles */
+        .activity-diary {
+            padding: 20px;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .photo {
+            position: relative;
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /*.photo p {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+        }*/
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Header content here -->
+        <div class="container">
+            <h1><a href="index.html" class="title-link custom-color">곽수연의 포트폴리오</a></h1><br><hr>
+            <nav>
+                <ul>
+                    <li><a href="프로필.html">프로필</a></li>
+                    <li><a href="이력.html">이력</a></li>
+                    <li><a href="프로젝트.html">프로젝트</a></li>
+                    <li><a href="대내외활동.html">대내외활동</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="activity-diary">
+        <div class="container">
+            <h2>스마트 팩토리 강연</h2>
+            <div class="photo-gallery">
+                <div class="photo">
+                    <img src="스마트팩토리.jpg" alt="스마트팩토리">
+                    <p>2024년 5월 29일, 2024년 6월 5일</p>
+                </div>
+            </div>
+            <p>스마트 팩토리에 대해 배웠고 내가 앞으로 어떻게 진로설계를 해야하는지 배웠습니다.</p>
+        </div>
+    </section>
+
+    <section class="activity-diary">
+        <div class="container">
+            <h2>황룡모둠학습</h2>
+            <div class="photo-gallery">
+                <div class="photo">
+                    <img src="튜터링.jpg" alt="튜터링">
+                    <p>2023년 2학년 2학기</p>
+                </div>
+            </div>
+            <p>황룡 모둠학습을 통하여 소프트웨어 공학에 대해 재미있게 공부했습니다. 공부도 하면서 시험에 대비하기까지 무려 일석이조의 효과였습니다. </p>
+        </div>
+    </section>
+
+    <section class="activity-diary">
+        <div class="container">
+            <h2>메타버스 교육</h2>
+            <div class="photo-gallery">
+                <div class="photo">
+                    <img src="메타버스.jpg" alt="메타버스">
+                    <p>2023년 9월</p>
+                </div>
+            </div>
+            <p>메타버스 설계는 어려울거라고 생각했는데 쉽고 재미있었습니다. 저 혼자서도 잘 구축했습니다. </p>
+        </div>
+    </section>
+
+    <section class="activity-diary">
+        <div class="container">
+            <h2>유기견 봉사활동</h2>
+            <div class="photo-gallery">
+                <div class="photo">
+                    <img src="유기견.jpg" alt="유기견">
+                    <p>2022년 5월 14일</p>
+                </div>
+            </div>
+            <p>위험에 빠진 강아지들을 돌보면서 봉사정신과 희생정신을 키웠습니다. 강아지는 함부로 유기하면 안됩니다.</p>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer content here -->
+        <div class="container">
+            <p>&copy; 2200898 곽수연</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript code here
+        // Your existing JavaScript code
+    </script>
+</body>
+</html>
